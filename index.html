@@ -11,9 +11,9 @@
             box-sizing: border-box;
         }
         :root {
-            --button-height : 32px;
+            --button-height: 32px;
             --font-size: 14px;
-            --button-gb: white;
+            --button-bg: white;
             --button-active-bg: #eee;
             --border-radius: 4px;
             --color: #333;
@@ -21,15 +21,17 @@
             --border-color-hover: #666;
         }
         #app {
-            margin: 0 20px;
+            margin: 20px;
         }
-
     </style>
 </head>
 <body>
     <div id='app'>
-        <g-button></g-button>
+        <g-button name='按钮'></g-button>
+        <g-button name='按钮' icon='setting' btnposition='left'></g-button>
+        <g-button name='按钮' icon='setting' btnposition='right'></g-button>
     </div>
     <script src='./src/main.js'></script>
+    <script src='//at.alicdn.com/t/font_1864388_ytg2wbryx5.js'></script>
 </body>
 </html>
