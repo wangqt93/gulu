@@ -1,25 +1,40 @@
 <template>
-        <button class='g-button' :class='btnposition'>
-            <g-icon :icon='icon' class='icons'></g-icon>
-            <g-icon icon='loading' class='icons loading'></g-icon>
-            {{name}}
+        <button class='g-button' :class='btnposition' @click=$emit('click')>
+            <g-icon class='icon' v-if='icon && !loading' :name='icon' ></g-icon>
+            <g-icon class='loading icon' v-if='loading' name='loading' ></g-icon>
+            <slot></slot>
         </button>
 </template>
 <script>
     export default {
-        props: ['name','icon','btnposition']
+        props: {
+            icon:{},
+            btnposition: {
+                type: String,
+                default: 'left'
+            },
+            loading: {
+                type: Boolean,
+                default: false
+            }
+        }
+
     }
 </script>
 <style>
 .g-button {
     height: var(--button-height);
     height: var(--button-height);
+    font-size: var(--font-size);
     padding: 0 1em;
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     background: var(--button-bg);
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    cursor: pointer;
 }
 .g-button:hover {
     border-color: var(--border-color-hover);
@@ -30,8 +45,13 @@
 .g-button:focus{
     outline: none;
 }
-.g-button.right>.icons {
+.icon {
+    margin-right: .1em;
+}
+.g-button.right>.icon {
     order: 2;
+    margin-left: .1em;
+    margin-right: 0;
 }
 @keyframes spin {
     0%{transform:rotate(0deg);}
