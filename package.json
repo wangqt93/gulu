@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/wangqt93/gulu#readme",
   "dependencies": {
+    "spies": "^0.1.6",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4"
   },

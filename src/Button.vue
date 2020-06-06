@@ -35,6 +35,7 @@
     justify-content: center;
     vertical-align: middle;
     cursor: pointer;
+    
 }
 .g-button:hover {
     border-color: var(--border-color-hover);
