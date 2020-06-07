@@ -26,10 +26,63 @@
         .module {
             margin-top: 20px;
         }
+        .grid {
+            margin-bottom: 100px;
+            border: 1px solid;
+        }
     </style>
 </head>
 <body>
     <div id='app'>
+        <div class='grid'>
+            <!--felx布局，平分空间-->
+            <!--gutter设置间距-->
+            <g-row gutter='20'>
+                <g-col>1</g-col>           
+                <g-col>2</g-col>
+            </g-row>
+            <g-row gutter='20'>
+                <g-col>1</g-col>
+                <g-col>2</g-col>
+                <g-col>3</g-col>
+            </g-row>
+            <g-row gutter='20'>
+                <g-col>1</g-col>
+                <g-col>2</g-col>
+                <g-col>3</g-col>
+                <g-col>4</g-col>
+            </g-row>
+            <g-row gutter='20'>
+                <g-col>1</g-col>
+                <g-col>2</g-col>
+                <g-col>3</g-col>
+                <g-col>4</g-col>
+                <g-col>5</g-col>
+            </g-row>
+            <!--span代表了盒子占据的列数，一行分12列-->
+            <g-row gutter='20'>
+                <g-col span=1>1</g-col>
+                <g-col span=11>11</g-col>
+            </g-row>
+            <g-row gutter='20'>
+                <g-col span=1>1</g-col>
+                <g-col span=9>9</g-col>
+                <g-col span=2>2</g-col>
+            </g-row>
+            <g-row gutter='20'>
+                <g-col span=1>1</g-col>
+                <g-col span=10 setmove=1>10</g-col>
+            </g-row>
+            <g-row gutter='20'>
+                <g-col span=2>2</g-col>
+                <g-col span=1 setmove=2>1</g-col>
+                <g-col span=5 setmove=2>5</g-col>
+            </g-row>
+            
+
+            
+        </div>
+
         <g-input value='张三' :disabled='true'></g-input>
         <g-input value='李四' :readonly='true'></g-input>
         <g-input value='王五' @show='fn'></g-input>
