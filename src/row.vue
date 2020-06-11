@@ -3,7 +3,7 @@
         <slot></slot>
     </div>
 </template>
-<style>
+<style scoped>
     .row {
         height: 100px;
         display: flex;

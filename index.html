@@ -27,13 +27,32 @@
             margin-top: 20px;
         }
         .grid {
-            margin-bottom: 100px;
+            margin: 100px 0;
+
             border: 1px solid;
+        }
+        .demo {
+            min-height: 100px; 
+            border: 1px solid green;
+            text-align: center;
+            line-height: 100px;
         }
     </style>
 </head>
 <body>
     <div id='app'>
+        <button @click="showtoast">点我</button>
+        <g-layout style='height:600px'>
+            <g-header class='demo'>HEADER</g-header>
+            <g-layout>
+                <g-aside>ASIDE</g-aside>
+                <g-content class='demo'>CONTENT</g-content>
+            </g-layout>
+            <g-footer class='demo'>FOOTER</g-footer>
+        </g-layout>
+
+
+
         <div class='grid'>
             <!--felx布局，平分空间-->
             <!--gutter设置间距-->
@@ -77,10 +96,7 @@
                 <g-col span=2>2</g-col>
                 <g-col span=1 setmove=2>1</g-col>
                 <g-col span=5 setmove=2>5</g-col>
-            </g-row>
-            
-
-            
+            </g-row>  
         </div>
 
         <g-input value='张三' :disabled='true'></g-input>
@@ -96,7 +112,7 @@
                 <g-button icon='right' btnposition='right'>下一页</g-button>
             </g-group>
         </div>
-
+        
         
     </div>
     <script src='./src/main.js'></script>

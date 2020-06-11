@@ -5,7 +5,7 @@
         </div> 
     </div>
 </template>
-<style scoped lang='scss'>
+<style scoped>
     .col {
         height:100%;
         width: 50%;
